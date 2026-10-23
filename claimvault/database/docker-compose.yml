@@ -1,0 +1,11 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: claimvault-db
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - claimvault-data:/data/db
+volumes:
+  claimvault-data:
